@@ -1,0 +1,146 @@
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+body {
+  min-height: 100vh;
+  background-color:azure
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    font-style: italic;
+    background-repeat: no-repeat;
+    background-size: cover;
+    shape-margin: 0.75rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 3em;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+h3 {
+    font-size: 1.0em;
+    font-weight: 400;
+}
+
+p {
+    font-size: 1rem;
+}
+
+.group-sessions {
+  /* Set the display property to grid to create a grid container */
+  display: grid;
+  /* Set the gap between the grid items */
+  grid-gap: 10px;
+  /* Set the grid template columns to repeat auto-fill minmax 150px 1fr */
+  /* This will create as many columns as possible with a minimum width of 150px and a maximum width of 1fr */
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+
+.study-group {
+    background-color: whitesmoke;
+  /* Adding a small border around the study group */
+  border: 1px solid lightgray;
+  /* Adding a border radius of 10 pixels */
+  border-radius: 10px;
+  /* Adding a drop shadow in the lower right corner */
+  box-shadow: 5px 5px 5px gray;
+  /* Adding some margin and padding for spacing */
+  margin: 20px 0;
+  padding: 10px;
+  min-width: 25em
+}
+
+.study-group img {
+width: 100%;
+height: 200px;
+object-fit: cover;
+object-position: center;
+}
+
+.study-group ol {
+  /* Aligning the questions to the bottom of the study group */
+  vertical-align: bottom;
+  /* Adding some margin and padding for spacing */
+  margin: 10px;
+  padding: 0;
+}
+
+.middle-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.middle-section img {
+width: 100%;
+height: auto;
+object-fit: cover;
+object-position: center;
+}
+
+.answer-card {
+    background-color: whitesmoke;
+ /* Adding a small border around the study group */
+  border: 1px solid lightgray;
+  /* Adding a border radius of 10 pixels */
+  border-radius: 10px;
+  /* Adding a drop shadow in the lower right corner */
+  box-shadow: 5px 5px 5px gray;
+  /* Adding some margin and padding for spacing */
+  margin: 20px 0;
+  padding: 10px;
+  /* min-width: 25em */
+}
+
+@media screen and (min-width: 768px) {
+  /* For medium screens, set the grid template columns to repeat 2 1fr */
+  /* This will create two columns with equal width */
+  .group-sessions {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  /* For large screens, set the grid template columns to repeat 3 1fr */
+  /* This will create three columns with equal width */
+  .group-sessions {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* For small screens, set the grid template columns to 1fr */
+  /* This will create one column with full width */
+  .group-sessions {
+    grid-template-columns: 1fr;
+  }
+}
